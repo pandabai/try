@@ -22,7 +22,7 @@ import com.qq.regist.UserInformation;
  * 问问
  * 删了123
  * QQ��������
- * 
+ * 凑合在浏览器改改
  * @param args
  */
 
