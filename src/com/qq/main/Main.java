@@ -19,7 +19,7 @@ import com.qq.regist.Regist;
 import com.qq.regist.UserInformation;
 
 /**
- *
+ * 问问
  * 删了123
  * QQ��������
  * 
