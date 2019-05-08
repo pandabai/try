@@ -19,7 +19,8 @@ import com.qq.regist.Regist;
 import com.qq.regist.UserInformation;
 
 /**
- * 随便加两行
+ *
+ * 删了
  * QQ��������
  * 
  * @param args
