@@ -19,7 +19,8 @@ import com.qq.regist.Regist;
 import com.qq.regist.UserInformation;
 
 /**
- * QQµÄÖ÷½çÃæ
+ * éšä¾¿åŠ ä¸¤è¡Œ
+ * QQï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @param args
  */
@@ -34,14 +35,14 @@ public class Main extends JFrame {
 	private JButton btRegist;
 
 	Main() {
-		userId = new JLabel("ÕÊºÅ");
-		userPassword = new JLabel("ÃÜÂë");
-		inputId = new JTextField(6);// ÒÉÎÊ£º£¿£¿
+		userId = new JLabel("ï¿½Êºï¿½");
+		userPassword = new JLabel("ï¿½ï¿½ï¿½ï¿½");
+		inputId = new JTextField(6);// ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½
 		inputPassword = new JPasswordField();
-		btLogin = new JButton("µÇÂ½");
-		btRegist = new JButton("×¢²á");
+		btLogin = new JButton("ï¿½ï¿½Â½");
+		btRegist = new JButton("×¢ï¿½ï¿½");
 
-		// ÉèÖÃ´°ÌåÊôĞÔ
+		// ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension screenSize = tk.getScreenSize();
 		int x = (int) screenSize.getWidth();
@@ -50,43 +51,43 @@ public class Main extends JFrame {
 		this.setResizable(false);
 		this.setLayout(null);
 
-		this.setBackground(Color.BLACK);// ÒÉÎÊ£¿£¿
+		this.setBackground(Color.BLACK);// ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// ÉèÖÃJLabelÊôĞÔ
+		// ï¿½ï¿½ï¿½ï¿½JLabelï¿½ï¿½ï¿½ï¿½
 		userId.setBounds(30, 160, 40, 20);
 		userPassword.setBounds(30, 200, 40, 20);
-		// ÉèÖÃÎÄ±¾ÓòÊôĞÔ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		inputId.setBounds(90, 160, 100, 20);
 		inputPassword.setBounds(90, 200, 100, 20);
 		inputPassword.setEchoChar('*');
-		// ÉèÖÃJButtonÊôĞÔ
+		// ï¿½ï¿½ï¿½ï¿½JButtonï¿½ï¿½ï¿½ï¿½
 		btLogin.setBounds(50, 240, 60, 20);
 		btRegist.setBounds(120, 240, 60, 20);
 
-		// ×¢²á¡¶µÇÂ½¡·°´Å¥¼àÌıÆ÷
+		// ×¢ï¿½á¡¶ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		btLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				UserInformation user = new UserInformation();
 				String userName = inputId.getText();
 				String userPassword = new String(inputPassword.getPassword());
 				if (userName.equals("")) {
-					JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+					JOptionPane.showMessageDialog(null, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 				} else if ("".equals(userPassword)) {
-					JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Îªï¿½ï¿½");
 				} else if (user.isExist(userName)
 						&& user.userInfomation.getProperty(userName).equals(
 								userPassword)) {
-					// ÅĞ¶Ï³É¹¦ºónewÒ»¸öÈºÁÄ´°¿Ú
+					// ï¿½Ğ¶Ï³É¹ï¿½ï¿½ï¿½newÒ»ï¿½ï¿½Èºï¿½Ä´ï¿½ï¿½ï¿½
 					new AllTalkFrame(userName).setVisible(true);
 					Main.this.dispose();
 				} else {
-					JOptionPane.showMessageDialog(null, "´ËÓÃ»§Ãû²»´æÔÚ»òÕßÃÜÂë²»ÕıÈ·");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½È·");
 				}
 			}
 		});
 
-		// ×¢²á¡¶×¢²á¡·°´Å¥¼àÌıÆ÷
+		// ×¢ï¿½á¡¶×¢ï¿½á¡·ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		btRegist.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Regist();
