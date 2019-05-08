@@ -20,7 +20,7 @@ import com.qq.regist.UserInformation;
 
 /**
  *
- * 删了
+ * 删了123
  * QQ��������
  * 
  * @param args
